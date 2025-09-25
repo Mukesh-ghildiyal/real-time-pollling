@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // Configure CORS for Socket.io
 const io = socketIo(server, {
   cors: {
-    origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ["http://localhost:5173", "http://localhost:3000", "https://resonant-torrone-89599e.netlify.app/", "http://localhost:8080", "http://127.0.0.1:5173", "http://127.0.0.1:8080"],
+    origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ["http://localhost:5173", "http://localhost:3000", "https://resonant-torrone-89599e.netlify.app", "http://localhost:8080", "http://127.0.0.1:5173", "http://127.0.0.1:8080"],
     methods: ["GET", "POST"],
     credentials: true
   }
@@ -18,7 +18,7 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors({
-  origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ["http://localhost:5173", "https://resonant-torrone-89599e.netlify.app/", "http://localhost:3000", "http://localhost:8080", "http://127.0.0.1:5173", "http://127.0.0.1:8080"],
+  origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ["http://localhost:5173", "https://resonant-torrone-89599e.netlify.app", "http://localhost:3000", "http://localhost:8080", "http://127.0.0.1:5173", "http://127.0.0.1:8080"],
   credentials: true
 }));
 app.use(express.json());
